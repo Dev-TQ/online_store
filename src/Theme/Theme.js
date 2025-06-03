@@ -19,6 +19,8 @@ components:{
         borderRadius:"2px",
         backgroundColor:"#800000" ,
         fontWeight:"bold",
+        color:"white",
+
         "&:hover":{
           color:"red",
             backgroundColor:"white"
@@ -33,9 +35,10 @@ components:{
   MuiTypography:{
   styleOverrides:{
     root:{
-      fontSize:"20px",
-      color:"green",
+      fontSize:"15px",
+    
       backgroundColor:"black",
+      color:"white",
     padding:"10px",
     textAlign:"center",
     "&:hover":{
