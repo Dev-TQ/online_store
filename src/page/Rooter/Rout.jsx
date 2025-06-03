@@ -1,7 +1,5 @@
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-
-
 import Home from '../HOME/Home';
 import Create from '../Create/Create';
 import App from '../../App';
