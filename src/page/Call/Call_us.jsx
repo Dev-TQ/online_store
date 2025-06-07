@@ -4,7 +4,7 @@ import "./Call.css";
 import CallIcon from "@mui/icons-material/Call";
 const CallUs = () => {
   return (
-    <Box sx={{ width: "75%", ml: "25%", mt: 15, bgcolor: "info.main" }}>
+    <Box sx={{  bgcolor: "info.main" }}>
       <Typography variant="h5" color="white" component={"h1"}>
         <IconButton >
           <CallIcon sx={{color:"white"}}/>

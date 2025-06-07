@@ -10,7 +10,7 @@ import { Box } from "@mui/material";
 
 const Create = () => {
   return (
-    <Box sx={{width:"75%",ml:"25%",mt:1}}>
+    <Box>
       <Card sx={{ maxWidth: 345 ,margin:"auto",marginTop:"50px"}}>
       <CardMedia
         sx={{ height: 140 }}

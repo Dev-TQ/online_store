@@ -11,8 +11,8 @@ const Home = () => {
   
   return (
 
-    <Box sx={{width:"75%",ml:"25%",mt:1}}>
-    <Typography noWrap  className="stayleHome" sx={{marginTop:"auto"}} color="primary" variant="h4" component="div">
+    <Box>
+    <Typography noWrap  className="stayleHome" sx={{marginTop:"20px"}} color="primary" variant="h4" component="div">
   This is one way to use styles in MUI (external CSS + sx)
     </Typography>                                 
     <Button variant="text" color="primary" endIcon={<DeleteIcon/>} sx={{mx:"auto",mt:2,display:"flex"}}>

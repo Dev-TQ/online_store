@@ -3,7 +3,7 @@ import React from 'react';
 import InfoIcon from '@mui/icons-material/Info';
 const About = () => {
   return (
-      <Box sx={{ width: "75%", ml: "25%", mt: 15, bgcolor: "info.main" }}>
+      <Box sx={{ bgcolor: "info.main" }}>
       <Typography variant="h5" color="white" component={"h1"}>
      <IconButton >
           <InfoIcon sx={{color:"white"}}/> 
