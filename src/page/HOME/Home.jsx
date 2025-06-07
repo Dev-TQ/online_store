@@ -1,7 +1,7 @@
 
 import "./Home.css"
 import React from 'react';
-import { Typography, Button, IconButton } from "@mui/material";
+import { Typography, Button, IconButton, Box } from "@mui/material";
 import theme from "Theme/Theme";
 // icons
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -11,7 +11,7 @@ const Home = () => {
   
   return (
 
-    <div>
+    <Box sx={{width:"75%",ml:"25%",mt:1}}>
     <Typography noWrap  className="stayleHome" sx={{marginTop:"auto"}} color="primary" variant="h4" component="div">
   This is one way to use styles in MUI (external CSS + sx)
     </Typography>                                 
@@ -21,7 +21,7 @@ const Home = () => {
     <IconButton sx={{mx:"auto",mt:2,display:"block"}} color="secondary" size="medium">
       <SystemUpdateAltIcon fontSize="inherit"/>
     </IconButton>
-    </div>
+    </Box>
   );
 };
 export default Home;

@@ -6,10 +6,11 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Box } from "@mui/material";
 
 const Create = () => {
   return (
-    <div>
+    <Box sx={{width:"75%",ml:"25%",mt:1}}>
       <Card sx={{ maxWidth: 345 ,margin:"auto",marginTop:"50px"}}>
       <CardMedia
         sx={{ height: 140 }}
@@ -30,7 +31,7 @@ const Create = () => {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-    </div>
+    </Box>
   );
 }
 

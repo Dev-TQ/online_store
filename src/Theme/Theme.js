@@ -17,9 +17,9 @@ components:{
     styleOverrides:{
       root:{
         borderRadius:"2px",
-        backgroundColor:"#800000" ,
+        // backgroundColor:"#800000" ,
         fontWeight:"bold",
-        color:"white",
+        // color:"white",
 
         "&:hover":{
           color:"red",
@@ -37,7 +37,7 @@ components:{
     root:{
       fontSize:"15px",
     
-      backgroundColor:"black",
+      // backgroundColor:"black",
       color:"white",
     padding:"10px",
     textAlign:"center",
