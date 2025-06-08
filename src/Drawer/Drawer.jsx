@@ -18,6 +18,7 @@ import CallIcon from "@mui/icons-material/Call";
 import React from "react";
 import { Home as HomeIcon, Create as CreateIcon, Margin } from "@mui/icons-material";
 import { useNavigate } from "react-router";
+import DnsIcon from '@mui/icons-material/Dns';
 const MyDrawer = () => {
   let navigate = useNavigate();
   return (
@@ -81,7 +82,15 @@ const MyDrawer = () => {
                 <ListItemText primary="User"/>
             </ListItemButton>
       </ListItem>
-          
+          {/* infoprodect */}
+          <ListItem >
+            <ListItemButton component={RouterLink} to="/InfoProducts">
+              <ListItemIcon sx={{color:"white"}}>
+                <DnsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Infoprodect"/>
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
     </Box>

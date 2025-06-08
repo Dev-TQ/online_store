@@ -11,6 +11,7 @@ import { Box } from "@mui/material";
 const Create = () => {
   return (
     <Box>
+      {/* card */}
       <Card sx={{ maxWidth: 345 ,margin:"auto",marginTop:"50px"}}>
       <CardMedia
         sx={{ height: 140 }}

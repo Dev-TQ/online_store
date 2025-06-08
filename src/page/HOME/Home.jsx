@@ -10,7 +10,6 @@ import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 const Home = () => {
   
   return (
-
     <Box>
     <Typography noWrap  className="stayleHome" sx={{marginTop:"20px"}} color="primary" variant="h4" component="div">
   This is one way to use styles in MUI (external CSS + sx)

@@ -12,7 +12,7 @@ const App = () => {
     <Box>
       <MyAppBar/>
       <Drawe/>
-      <Box sx={{border:1, ml:`${spacingMl}`,display:"flex",justifyContent:"center"}}>
+      <Box sx={{ ml:`${spacingMl}`,display:"flex",justifyContent:"center"}}>
 
       <Outlet />
       </Box>
