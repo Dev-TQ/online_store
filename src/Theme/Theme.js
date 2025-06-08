@@ -8,7 +8,7 @@ const theme = createTheme({
       main:"#7fffd4"
     },
     secondary :{
-      main:"#800000"
+      main:"#0000ff"
     }
   },
 
@@ -17,10 +17,9 @@ components:{
     styleOverrides:{
       root:{
         borderRadius:"2px",
-        // backgroundColor:"#800000" ,
-        fontWeight:"bold",
-        // color:"white",
-
+      
+        // fontWeight:"bold",
+    textTransform:"lowercase",
         "&:hover":{
           color:"red",
             backgroundColor:"white"

@@ -5,34 +5,85 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 import Typography from '@mui/material/Typography';
-import { Box } from "@mui/material";
-
+import { Box, InputAdornment, TextField, IconButton, styled, Stack } from "@mui/material";
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import EmailIcon from '@mui/icons-material/Email';
+import DeleteIcon from '@mui/icons-material/Delete';
+import RefreshIcon from '@mui/icons-material/Refresh';
 const Create = () => {
+  const Mybutton=styled(Button)({
+    color:"white",
+    backgroundColor:"teal"
+    ,margin:"10px"
+  })
   return (
-    <Box>
-      {/* card */}
-      <Card sx={{ maxWidth: 345 ,margin:"auto",marginTop:"50px"}}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+    <Box sx={{my:5}} color={"red"} component={"form"}>
+
+<Stack spacing={4}>
+
+
+    <TextField fullWidth sx={{my:2}} placeholder="Enter your name" helperText="Please enter your name max 8 letters"  color="secondary" label="Name" variant="standard" />
+  
+<TextField  fullWidth sx={{my:2}} label="Email"  variant="standard"
+inputProps={{
+  type:`email`
+}}
+InputProps={{
+  startAdornment:
+  <InputAdornment position="start">
+   <EmailIcon fontSize="inherit"/>
+  </InputAdornment>
+}}
+placeholder="Enter your email"
+/>
+
+ <TextField fullWidth sx={{my:2}}
+      label="password"
+      variant="standard"
+      helperText="this is email"
+      inputProps={{
+        type: `password`
+        , maxLength: 9
+      }}
+      InputProps={{
+        startAdornment:<InputAdornment position="start">
+          <LockOpenIcon fontSize="inherit"/>
+        </InputAdornment>
+      }}
+      placeholder="Enter your password"
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+
+
+
+</Stack>
+
+
+
+
+
+
+
+    <Stack direction={"row"} spacing={4} sx={{m:2}} >
+
+        <Mybutton>
+          send
+          <IconButton  >
+          <SendIcon fontSize="inherit" sx={{color:"white"}}/>  
+          </IconButton>
+        </Mybutton>
+        <Mybutton>Delate
+            <IconButton  >
+          <DeleteIcon fontSize="inherit" sx={{color:"white"}}/>  
+          </IconButton>
+        </Mybutton>
+        <Mybutton>
+          <RefreshIcon sx={{color:"white"}}/>reste
+        </Mybutton>
+    </Stack>
     </Box>
+      
   );
 }
 
