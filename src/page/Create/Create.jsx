@@ -19,7 +19,7 @@ const Create = () => {
     ,margin:"10px"
   })
   return (
-    <Box sx={{my:5}} color={"red"} component={"form"}>
+    <Box sx={{my:5,background:"teal",p:5}} color={"red"} component={"form"}>
 
 <Stack spacing={4}>
 

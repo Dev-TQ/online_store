@@ -10,6 +10,7 @@ import {
   Divider, Typography,
   IconButton,
 } from "@mui/material";
+import { useTheme } from "@emotion/react";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import InfoIcon from "@mui/icons-material/Info";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
@@ -21,6 +22,11 @@ import { useNavigate } from "react-router";
 import DnsIcon from '@mui/icons-material/Dns';
 const MyDrawer = () => {
   let navigate = useNavigate();
+  const theme= useTheme();
+  // @ts-ignore
+  const coloricon=theme.palette.mode==="dark"?"light":"dark";
+  // @ts-ignore
+  const colortext=theme.palette.mode==="dark"?"#f1f1f1":"#222";
   return (
     <Box>
       <Drawer
@@ -28,28 +34,29 @@ const MyDrawer = () => {
         hideBackdrop
         anchor="left"
         open={true}
-        sx={{ "& .MuiDrawer-paper": { width: "25%", background: "teal  " } }}
+        // @ts-ignore
+        sx={{ "& .MuiDrawer-paper": { width: "25%",backgroundColor: theme.palette.mode === "dark" ? "#111" : "#fff" } }}
       >
-      <Brightness4Icon sx={{my:"20px",mx:"auto",color:"yellow"}} ></Brightness4Icon>
+      <Brightness4Icon sx={{my:"20px",mx:"auto",color:"yellow"}}  ></Brightness4Icon>
         
         <Divider />
         <List sx={{ color: "green", mt: 3}}>
           {/* Home */}
-          <ListItem>
-          <ListItemButton component={RouterLink} to="/">
-            <ListItemIcon sx={{ color: "white" }}>
-              <HomeIcon />
+          <ListItem >
+          <ListItemButton  component={RouterLink} to="/">
+            <ListItemIcon sx={{ color: coloricon }}>
+              <HomeIcon  />
             </ListItemIcon>
-            <ListItemText primary="Home" sx={{ color: "white" }} />
+            <ListItemText primaryTypographyProps={{ sx: { color: colortext  } }} primary="Home"  />
           </ListItemButton>
           </ListItem>
           {/* create */}
           <ListItem>
           <ListItemButton component={RouterLink} to="/create">
             <ListItemIcon>
-              <CreateIcon sx={{ color: "white" }} />
+              <CreateIcon sx={{ color: coloricon }} />
             </ListItemIcon>
-            <ListItemText primary="Create" sx={{ color: "white" }} />
+            <ListItemText primaryTypographyProps={{ sx: { color: colortext  } }}  primary="Create"  />
           </ListItemButton>
           </ListItem>
             
@@ -57,18 +64,18 @@ const MyDrawer = () => {
           <ListItem>
           <ListItemButton component={RouterLink} to="/CallUs">
             <ListItemIcon>
-              <CallIcon sx={{ color: "white" }} />
+              <CallIcon sx={{ color: coloricon }} />
             </ListItemIcon>
-            <ListItemText primary="Call us" sx={{ color: "white" }} />
+            <ListItemText primaryTypographyProps={{ sx: { color: colortext  } }} primary="Call us"  />
           </ListItemButton>
           </ListItem>
           {/* about*/}
           <ListItem>
           <ListItemButton component={RouterLink} to="/About">
             <ListItemIcon>
-              <InfoIcon sx={{ color: "white" }} />
+              <InfoIcon sx={{ color: coloricon }} />
             </ListItemIcon>
-            <ListItemText primary="About" sx={{ color: "white" }} />
+            <ListItemText primaryTypographyProps={{ sx: { color: colortext  } }} primary="About"  />
           </ListItemButton>
           </ListItem>
           {/* user */}
@@ -76,19 +83,19 @@ const MyDrawer = () => {
             <ListItemButton onClick={()=> navigate("/Home")}>
               <ListItemIcon>
                 <IconButton>
-                <AccountCircleIcon sx={{color:"white"}}/>
+                <AccountCircleIcon sx={{ color: coloricon }}/>
                 </IconButton>
               </ListItemIcon>
-                <ListItemText primary="User"/>
+                <ListItemText primaryTypographyProps={{ sx: { color: colortext  } }} primary="User"/>
             </ListItemButton>
       </ListItem>
           {/* infoprodect */}
           <ListItem >
             <ListItemButton component={RouterLink} to="/InfoProducts">
-              <ListItemIcon sx={{color:"white"}}>
+              <ListItemIcon sx={{ color: coloricon }}>
                 <DnsIcon />
               </ListItemIcon>
-              <ListItemText primary="Infoprodect"/>
+              <ListItemText primaryTypographyProps={{ sx: { color: colortext  } }} primary="Infoprodect"/>
             </ListItemButton>
           </ListItem>
         </List>

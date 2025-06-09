@@ -1,14 +1,15 @@
 import { Opacity } from "@mui/icons-material";
 import { colors } from "@mui/material";
+import { useContext } from "react";
 import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
-
   palette :{
+    mode:"light",
     primary:{
-      main:"#7fffd4"
+      main:"#2196f3"
     },
     secondary :{
-      main:"#0000ff"
+      main:"##f50057"
     }
   },
 
